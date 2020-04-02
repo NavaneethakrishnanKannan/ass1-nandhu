@@ -1,0 +1,66 @@
+
+* { 
+  box-sizing: border-box;
+  margin: 0; 
+  padding: 0; 
+  border: 0;
+  outline: none;
+}
+body { 
+  font: 62.5%/1.5  "Lucida Grande", "Lucida Sans", Tahoma, Verdana, sans-serif; 
+  background-color: var(--bg-primary); 
+  color: var(--text-color1);
+} 
+
+input.text { 
+  padding: 3px; 
+  border: 1px solid var(--grey-500);     
+}
+img {
+  border-style: none;
+}
+
+.clear { 
+  clear:both; 
+} 
+
+.right { 
+  float: right; 
+} 
+
+.left { 
+  float: left; 
+}
+
+h1 { 
+  font-size: 2.2em; 
+} 
+   
+h2 { 
+  font-size: 2.0em;     
+} 
+   
+h3 { 
+  font-size: 1.8em; 
+} 
+   
+h4 { 
+  font-size: 1.6em;     
+} 
+   
+h5 { 
+  font-size: 1.4em;     
+} 
+   
+p { 
+  font-size: 1.2em;     
+}
+.mr-15 {
+  margin-right: 15px;
+}
+.ml-15{
+  margin-left: 15px;
+}
+li{
+  list-style: none;
+}
