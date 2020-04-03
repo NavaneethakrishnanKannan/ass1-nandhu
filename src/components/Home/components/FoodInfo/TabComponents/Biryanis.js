@@ -81,7 +81,7 @@ export default function Biryani(props) {
                                         <Label as="h5">Total</Label>
                                         <Label>70.00 Rs</Label>
                                     </div>
-                                    <Button styles={{ width: "100%", height: 50 }}>Check Out</Button>
+                                    <Button type="custom" styles={{ width: "100%", height: 50 }}>Check Out</Button>
                                 </Cart.Footer>
                             </Cart>
                         </>

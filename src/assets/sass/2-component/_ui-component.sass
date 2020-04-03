@@ -178,6 +178,9 @@ nav .header-items
 .dish-option-bar
     background: #EDEFF4;
     padding: 10px;
+    display: flex;
+.menu-items
+    margin-right: 30px;
 
 .accordion.ac-wrapper
     user-select: none;
@@ -274,15 +277,27 @@ nav .header-items
     justify-content: space-between;
 #root
     padding: 10px 20px;
-.dark
-    background: $secondary-color;
-    color: $primary-color;
-    .btn-search
-        color: white
 .wallet-img
     width: 24px;
     height: 24px;
     margin-right: 15px
+.dark
+    background: $secondary-color;
+    color: $primary-color;
+    .btn-search
+        color: white;
+    .wallet-img
+        background: white;
+        border-radius: 5px
+    .value-wrp > p
+        color: black;
+    .accordian-btn-icon
+        background: none;
+    .accordian-icon-secondary
+        color: white;
+    .menu-items
+        color: black;
+
 
 @media only screen and (max-width: 600px)
     .food-info .item-info
@@ -324,4 +339,6 @@ nav .header-items
         background: none !important;
         .cart-icon-pos
             color: white !important;
+    .dish-option-bar
+        display: none
         

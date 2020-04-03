@@ -1,45 +1,44 @@
 import React, { useEffect } from 'react';
+import Accordion from '../../../../../common/Accordion';
 import Cart from '../../../../../common/Cart/Cart';
 import { cartOptions } from '../../../../../constants/SampleData';
 import Label from '../../../../../common/Label';
 import Button from '../../../../../common/Button';
 import AddMinusButton from '../../../../../common/AddMinusButton';
-import Accordion from '../../../../../common/Accordion';
 import { getFoodData } from '../../../../../action/homeActions';
 
-export default function QuickBites(props) {
-    const { dataQuickBites, setDataQuickBites } = props;
+export default function Indian(props) {
+    const { dataInd, setDataInd } = props;
     useEffect(() => {
         async function getData() {
-            const response = await getFoodData("/home/food/quickbites");
+            const response = await getFoodData("/home/food/indian");
             if (response && response.length) {
-                setDataQuickBites([...response]);
+                setDataInd([...response]);
             }
         }
-        if (!dataQuickBites.length) {
+        if (!dataInd.length) {
             getData();
         }
-        // setDataQuickBites(accordionOptionsQuickBite);
-    }, [dataQuickBites.length, setDataQuickBites]);
+    }, [dataInd.length, setDataInd]);
     return (
         <>
             <div className="cart-section flex-row" style={{ margin: "40px" }}>
                 <div className="cart-section-left" style={{ marginRight: 20, flex: "1 1 60%" }}>
                     {
-                        dataQuickBites.length ? (
+                        dataInd.length ? (
                             <>
                                 <Accordion
-                                    title="Quick Bite - Drumstick Chicken Gravy"
-                                    options={dataQuickBites}
+                                    title="Drumstick Chicken Gravy"
+                                    options={dataInd}
                                     show={true}
                                 />
                                 <Accordion
-                                    title="Quick Bite - Drumstick Chicken Gravy"
-                                    options={dataQuickBites}
+                                    title="Drumstick Chicken Gravy"
+                                    options={dataInd}
                                 />
                                 <Accordion
-                                    title="Quick Bite - Drumstick Chicken Gravy"
-                                    options={dataQuickBites}
+                                    title="Drumstick Chicken Gravy"
+                                    options={dataInd}
                                 />
                             </>
                         )
@@ -49,7 +48,7 @@ export default function QuickBites(props) {
                 </div>
                 <div className="cart-section-right">
                     {
-                        dataQuickBites.length ? (
+                        dataInd.length ? (
                             <>
                                 <Cart>
                                     <Cart.Header>
@@ -82,7 +81,7 @@ export default function QuickBites(props) {
                                             <Label as="h5">Total</Label>
                                             <Label>70.00 Rs</Label>
                                         </div>
-                                        <Button styles={{ width: "100%", height: 50 }}>Check Out</Button>
+                                        <Button type="custom" styles={{ width: "100%", height: 50 }}>Check Out</Button>
                                     </Cart.Footer>
                                 </Cart>
                             </>
