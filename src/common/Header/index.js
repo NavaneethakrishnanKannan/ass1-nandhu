@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import logo from "../../assets/img/logowebwhite.svg"
+// import logo from "../../assets/img/logowebwhite.svg"
 // import search from "../../assets/img/search.svg"
 import IconButton from '../IconButton';
 import Button from '../Button';
@@ -9,15 +9,18 @@ import { themeChanger } from '../../constants/themeChanger';
 
 export default function Header() {
     const [themeIcon, setThemeIcon] = useState("fa-moon-o");
-    const handleChangeTheme = () => {
-        const icon = themeChanger();
+    const handleChangeTheme = async () => {
+        const icon = await themeChanger();
+        // const logoImg = await getLogo();
+        // console.log(logoImg)
         setThemeIcon(icon)
-    }
+        // setLogo(logoImg)
+    };
     return (
         <>
             <nav className="flex-center" style={{ margin: "0 15px" }}>
                 <div class="logo flex-center">
-                    <img src={logo} alt="app-logo" />
+                    <img src={require(`../../assets/img/${themeIcon === "fa-sun-o" ? "logoBlack.svg" : "logowebwhite.svg"}`)} alt="app-logo" />
                 </div>
                 <div class="header-items flex-center">
                     <div class="first-block flex-center">
