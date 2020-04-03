@@ -5,7 +5,7 @@ import IconButton from '../IconButton';
 import Button from '../Button';
 import Icon from '../Icon';
 import Label from '../Label';
-import { themeChanger, getThemeIcon } from '../../constants/themeChanger';
+import { themeChanger } from '../../constants/themeChanger';
 
 export default function Header() {
     const [themeIcon, setThemeIcon] = useState("fa-moon-o");

@@ -12,7 +12,9 @@ export default function BBQ(props) {
     useEffect(() => {
         async function getData() {
             const response = await getFoodData("/home/food/bbq");
-            setDataBBQ([...response]);
+            if (response && response.length) {
+                setDataBBQ([...response]);
+            }
         }
         if (!dataBBQ.length) {
             getData();

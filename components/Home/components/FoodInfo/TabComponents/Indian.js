@@ -12,7 +12,9 @@ export default function Indian(props) {
     useEffect(() => {
         async function getData() {
             const response = await getFoodData("/home/food/indian");
-            setDataInd([...response]);
+            if (response && response.length) {
+                setDataInd([...response]);
+            }
         }
         if (!dataInd.length) {
             getData();

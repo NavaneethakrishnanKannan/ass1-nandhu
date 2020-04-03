@@ -12,7 +12,9 @@ export default function QuickBites(props) {
     useEffect(() => {
         async function getData() {
             const response = await getFoodData("/home/food/quickbites");
-            setDataQuickBites([...response]);
+            if (response && response.length) {
+                setDataQuickBites([...response]);
+            }
         }
         if (!dataQuickBites.length) {
             getData();

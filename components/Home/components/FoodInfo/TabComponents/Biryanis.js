@@ -12,7 +12,9 @@ export default function Biryani(props) {
     useEffect(() => {
         async function getData() {
             const response = await getFoodData("/home/food/biryani");
-            setDataBiryani([...response]);
+            if (response && response.length) {
+                setDataBiryani([...response]);
+            }
         }
         if (!dataBiryani.length) {
             getData();
